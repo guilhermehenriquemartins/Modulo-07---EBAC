@@ -40,3 +40,10 @@ button {
 button:hover {
     background-color: #27ae60;
 }
+
+.mensagem-sucesso {
+    background-color: #27ae60;
+    color: white;
+    padding: 20px;
+    display: none;
+}
