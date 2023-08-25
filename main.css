@@ -41,9 +41,18 @@ button:hover {
     background-color: #27ae60;
 }
 
-.mensagem-sucesso {
+.msg-sucesso {
     background-color: #27ae60;
     color: white;
-    padding: 20px;
+    padding: 15px;
+    display: none;
+}
+
+.error-message {
+    font-size: .9em;
+    background-color: red;
+    color: white;
+    padding: 8px;
+    margin-bottom: 8px;
     display: none;
 }
