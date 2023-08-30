@@ -1,32 +1,40 @@
 const form = window.document.getElementById('form-deposito')
 let nomeBeneficiario = window.document.getElementById('nome-beneficiario')
-let formEValido = false
+let validaFormulario = false;
+
 
 function validaNome(nomeCompleto) {
-  NomeComoArray = nomeCompleto.split(' ');
+  const NomeComoArray = nomeCompleto.split(' ')
   return NomeComoArray.length >= 2;
 }
 
-form.addEventListener('submit', function(e){
+
+form.addEventListener('submit', function(e) {
   e.preventDefault();
-  
-  let NumeroConta = window.document.getElementById('numero-conta')
-  let NumeroValor = window.document.getElementById('numero-valor')
-  let mensagemSucesso = `Valor <strong>${NumeroValor.value}</strong> depositado para o beneficiário <strong>${nomeBeneficiario.value}</strong> - conta: <strong>${NumeroConta.value}</strong>`
-  let resultado = window.document.querySelector('.msg-sucesso')
-  formEValido = validaNome(nomeBeneficiario.value)
-  if (formEValido) {
-    nomeBeneficiario.style.border = '1px solid black'
-    window.document.querySelector('.nome-erro').style.display = 'none'
-    window.document.querySelector('.msg-sucesso').style.display = 'block'
-    resultado.innerHTML = mensagemSucesso
+
+  let numeroConta = window.document.getElementById('numero-conta')
+  let numeroValor = window.document.getElementById('numero-valor')
+  let mensagemSucesso = `Valor <strong>${numeroValor.value}</strong> depositado para o cliente <strong>${nomeBeneficiario.value}</strong> - conta: <strong>${numeroConta.value}</strong>`
+
+  validaFormulario = validaNome(nomeBeneficiario.value)
+
+  if (validaFormulario) {
+    document.querySelector('.resultado').innerHTML = mensagemSucesso
+    document.querySelector('.resultado').style.display = 'block'
   } else {
     nomeBeneficiario.style.border = '1px solid red'
-    window.document.querySelector('.nome-erro').style.display = 'block'
-    window.document.querySelector('.msg-sucesso').style.display = 'none'
+    document.querySelector('.mensagem-erro').style.display = 'block'
   }
 })
 
 nomeBeneficiario.addEventListener('keyup', function(e) {
-  formEValido = validaNome(e.target.value)
+  validaFormulario = validaNome(e.target.value)
+
+  if (!validaFormulario) {
+    document.querySelector('.mensagem-erro').style.display = 'block'
+    nomeBeneficiario.style.border = '1px solid red'
+  } else {
+    nomeBeneficiario.style.border = 'none'
+    document.querySelector('.mensagem-erro').style.display = 'none'
+  }
 })

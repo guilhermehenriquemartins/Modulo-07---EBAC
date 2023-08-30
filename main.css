@@ -41,17 +41,17 @@ button:hover {
     background-color: #27ae60;
 }
 
-.msg-sucesso {
+.resultado {
     background-color: #27ae60;
     color: white;
-    padding: 15px;
+    padding: 10px;
     display: none;
 }
 
-.nome-erro {
+.mensagem-erro {
     background-color: red;
     color: white;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 8px;
     display: none;
 }

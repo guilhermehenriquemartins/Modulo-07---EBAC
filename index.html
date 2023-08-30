@@ -12,16 +12,18 @@
         <h1>EBAC Banking</h1>
         <h2>Depósitos</h2>
         <form id="form-deposito">
-            <input type="text" required placeholder="Nome completo do beneficiário" id="nome-beneficiario"/>
-            <p class="nome-erro">
-                [ERRO]: O Nome está incompleto, digite o nome completo
+            <input type="text" required placeholder="Nome completo do beneficiário" id="nome-beneficiario">
+            <p class="mensagem-erro">
+                <strong>[ERRO]:</strong> O nome está incompleto, preencha corretamente
             </p>
             <input type="number" required placeholder="Número da conta" id="numero-conta" />
             <input type="number" required placeholder="Valor" id="numero-valor" />
             <textarea placeholder="Descrição (opcional)"></textarea>
             <button type="submit">Depositar</button>
-            <p class="msg-sucesso"></p>
         </form>
+        <p class="resultado">
+            Valor <strong>1000</strong> depositado para o cliente <strong>fulano</strong> - conta: <strong>12345678</strong>
+        </p>
     </div>
     <script src="main.js"></script>
 </body>
