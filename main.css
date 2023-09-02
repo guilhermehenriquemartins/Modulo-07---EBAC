@@ -48,12 +48,12 @@ button:hover {
     display: none;
 }
 
-.mensagem-erro {
-     background-color: red;
-     color: white;
-     padding: 10px;
-     margin-bottom: 8px;
-     display: none;
+.erro-beneficiario {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: none;
 }
 
 input.error {

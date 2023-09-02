@@ -13,15 +13,17 @@
         <h2>Depósitos</h2>
         <form id="form-deposito">
             <input type="text" required placeholder="Nome completo do beneficiário" id="nome-beneficiario">
-            <p class="mensagem-erro">
-                [ERRO]: O nome está incompleto, faltando sobrenome
+            <p class="erro-beneficiario">
+                [ERRO]: Nome do beneficiário está incompleto, verifique-se se não há sobrenomes faltando
             </p>
             <input type="number" required placeholder="Número da conta" id="numero-conta"/>
             <input type="number" required placeholder="Valor" id="numero-valor"/>
             <textarea placeholder="Descrição (opcional)"></textarea>
             <button type="submit">Depositar</button>
         </form>
-        <p class="resultado"></p>
+        <p class="resultado">
+            Valor de 1000 depositado para o cliente fulano - conta: 000
+        </p>
     </div>
     <script src="main.js"></script>
 </body>
